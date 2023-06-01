@@ -1,5 +1,4 @@
-#ciao 
+#todo:
+# ciao
 
-# funzione che suggerisce
-# funzione che suggerisce
-
+print("Ciao sono il sudoKu")

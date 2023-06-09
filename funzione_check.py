@@ -31,3 +31,19 @@ def is_valid_sudoku(grid):
                 return False
 
     return True
+
+
+
+
+if __name__ == '__main__':
+    import generatore
+    import risolvi_griglia
+
+    grid = generatore.generate(mask_rate=0.7)
+    print(grid)
+    
+    risolvi_griglia.riempi_griglia_sudoku(grid)
+    
+    print(grid)
+
+    print(is_valid_sudoku(grid))

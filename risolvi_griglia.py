@@ -50,3 +50,14 @@ def riempi_griglia_sudoku(lista):
 
     risolvi_sudoku(lista)
     return lista
+
+if __name__ == '__main__':
+    import generatore
+
+    grid = generatore.generate(mask_rate=0.7)
+    
+    for i in range(len(grid)):
+        print(grid[i])
+    riempi_griglia_sudoku(grid)
+    for i in range(len(grid)):
+        print(grid[i])

@@ -6,7 +6,7 @@
 
 def is_valid_sudoku(grid):
     def is_valid_unit(unit):
-        unit = [i for i in unit if i != "."]
+        unit = [i for i in unit if i != " "]
         return len(unit) == len(set(unit))
 
     # Check rows

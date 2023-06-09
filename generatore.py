@@ -27,7 +27,6 @@ def mask(grid: ListGrid, rate: float = 0.5) -> ListGrid:
     return grid
 
 
-
 def generate(mask_rate=0.5) -> ListGrid:
     attempt = 1
     while True:

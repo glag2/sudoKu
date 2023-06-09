@@ -22,8 +22,7 @@ def gui(grid, win, FONT, ORIG_DIGIT_COLOR):
     # </editor-fold>
 
 
-def ins(window, pos, grid, BUFFER):
-    grid_empty = copy.deepcopy(grid)
+def ins(window, pos, grid, grid_empty, BUFFER):
     i, j = pos[1], pos[0]
     try:
         if i <= 0 or j <= 0:

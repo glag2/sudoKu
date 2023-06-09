@@ -1,4 +1,0 @@
-main
-funzione che verifica la validità dei numeri
-funzione che crea la matrice
-funzione che inserisce i numeri

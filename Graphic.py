@@ -22,7 +22,7 @@ FONT = pygame.font.SysFont("Comic Sans MS", 35)
 # </editor-fold>
 
 while True:
-# <editor-fold, Disegno griglia>
+    # <editor-fold, Disegno griglia>
     for i in range(10):
         if i % 3 == 0:
             pygame.draw.line(win, (0, 0, 0), (50 + 50*i, 50), (50 + 50*i, 500), 4)

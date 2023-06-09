@@ -54,4 +54,6 @@ def generate(mask_rate=0.5) -> ListGrid:
         logging.debug(f"generate by np_union attempt {attempt}")
     return mask(g_list, mask_rate)
 
-print(generate())
+grid = generate()
+for i in range(len(grid)):
+    print(grid[i])

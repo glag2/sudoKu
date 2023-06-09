@@ -1,19 +1,8 @@
 import pygame
 import copy
 
-# <editor-fold, Inizializzazione schermata e definizione costanti>
-pygame.init()
-pygame.display.set_caption("Sudoku")
-win = pygame.display.set_mode((550, 550))
-BUFFER = 5
-BG_COLOR = (251, 247, 245)
-win.fill(BG_COLOR)
-ORIG_DIGIT_COLOR = (52, 31, 151)
-FONT = pygame.font.SysFont("Comic Sans MS", 35)
-# </editor-fold>
 
-
-def gui(grid):
+def gui(grid, win, FONT, ORIG_DIGIT_COLOR):
     # <editor-fold, Disegno griglia>
     for i in range(10):
         if i % 3 == 0:
@@ -33,7 +22,7 @@ def gui(grid):
     # </editor-fold>
 
 
-def ins(window, pos, grid):
+def ins(window, pos, grid, BUFFER):
     grid_empty = copy.deepcopy(grid)
     i, j = pos[1], pos[0]
     try:

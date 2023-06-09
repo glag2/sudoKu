@@ -27,7 +27,6 @@ def mask(grid: ListGrid, rate: float = 0.5) -> ListGrid:
     return grid
 
 
-
 def generate(mask_rate=0.5) -> ListGrid:
     attempt = 1
     while True:
@@ -54,4 +53,7 @@ def generate(mask_rate=0.5) -> ListGrid:
         logging.debug(f"generate by np_union attempt {attempt}")
     return mask(g_list, mask_rate)
 
-print(generate())
+
+grid = generate()
+for i in range(len(grid)):
+    print(grid[i])

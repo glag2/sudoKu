@@ -21,21 +21,25 @@ ORIG_DIGIT_COLOR = (52, 31, 151)
 FONT = pygame.font.SysFont("Comic Sans MS", 35)
 # </editor-fold>
 
-while True:
-    # <editor-fold, Disegno griglia>
-    for i in range(10):
-        if i % 3 == 0:
-            pygame.draw.line(win, (0, 0, 0), (50 + 50*i, 50), (50 + 50*i, 500), 4)
-            pygame.draw.line(win, (0, 0, 0), (50, 50 + 50*i), (500, 50 + 50*i), 4)
 
-        pygame.draw.line(win, (0, 0, 0), (50 + 50*i, 50), (50 + 50*i, 500), 2)
-        pygame.draw.line(win, (0, 0, 0), (50, 50 + 50*i), (500, 50 + 50*i), 2)
+def GUI():
+    while True:
+        # <editor-fold, Disegno griglia>
+        for i in range(10):
+            if i % 3 == 0:
+                pygame.draw.line(win, (0, 0, 0), (50 + 50*i, 50), (50 + 50*i, 500), 4)
+                pygame.draw.line(win, (0, 0, 0), (50, 50 + 50*i), (500, 50 + 50*i), 4)
 
-    # Scrivo i valori dentro la griglia
-    for i in range(len(grid[0])):
-        for j in range(len(grid[0])):
-            if 0 < grid[i][j] < 10:
-                value = FONT.render(str(grid[i][j]), True, ORIG_DIGIT_COLOR)
-                win.blit(value, ((j+1)*50 + 15, (i+1)*50))
-    pygame.display.update()
-    # </editor-fold>
+            pygame.draw.line(win, (0, 0, 0), (50 + 50*i, 50), (50 + 50*i, 500), 2)
+            pygame.draw.line(win, (0, 0, 0), (50, 50 + 50*i), (500, 50 + 50*i), 2)
+
+        # Scrivo i valori dentro la griglia
+        for i in range(len(grid[0])):
+            for j in range(len(grid[0])):
+                if 0 < grid[i][j] < 10:
+                    value = FONT.render(str(grid[i][j]), True, ORIG_DIGIT_COLOR)
+                    win.blit(value, ((j+1)*50 + 15, (i+1)*50))
+        pygame.display.update()
+        # </editor-fold>
+
+GUI()

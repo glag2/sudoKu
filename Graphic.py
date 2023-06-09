@@ -13,7 +13,7 @@ FONT = pygame.font.SysFont("Comic Sans MS", 35)
 # </editor-fold>
 
 
-def GUI(grid):
+def gui(grid):
     # <editor-fold, Disegno griglia>
     for i in range(10):
         if i % 3 == 0:
